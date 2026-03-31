@@ -40,6 +40,7 @@ PraisonAI 🦞 — Automate and solve complex challenges with AI agent teams tha
 ---
 
 > **Quick Paths:**
+>
 > - 🆕 **New here?** → [Quick Start](#-quick-start) *(1 minute to first agent)*
 > - 📦 **Installing?** → [Installation](#-installation)
 > - 🐍 **Python SDK?** → [Python Examples](#-using-python-code)
@@ -74,7 +75,7 @@ AI agents solving real-world problems across industries:
 
 ---
 
-##  Supported Providers
+## Supported Providers
 
 PraisonAI supports 100+ LLM providers through seamless integration:
 
@@ -224,8 +225,6 @@ praisonai claw
 npm install praisonai
 ```
 
-
-
 ---
 
 ## 📘 Using Python Code
@@ -323,7 +322,7 @@ pip install "praisonai[claw]"
 praisonai claw
 ```
 
-Open **http://localhost:8082** — the dashboard comes with 13 built-in pages: Chat, Agents, Memory, Knowledge, Channels, Guardrails, Cron, and more. Add messaging channels directly from the UI.
+Open **<http://localhost:8082>** — the dashboard comes with 13 built-in pages: Chat, Agents, Memory, Knowledge, Channels, Guardrails, Cron, and more. Add messaging channels directly from the UI.
 
 > 📖 [Full Claw docs](https://docs.praison.ai/docs/concepts/claw) — platform tokens, CLI options, Docker, and YAML agent mode
 
@@ -352,6 +351,7 @@ agents:
 ```
 
 Run with:
+
 ```bash
 praisonai agents.yaml
 ```
@@ -363,6 +363,7 @@ praisonai agents.yaml
 Create two files in the same folder:
 
 **agents.yaml:**
+
 ```yaml
 framework: praisonai
 topic: "Calculate the sum of 25 and 15"
@@ -377,6 +378,7 @@ agents:
 ```
 
 **tools.py:**
+
 ```python
 def add_numbers(a: float, b: float) -> float:
     """
@@ -393,11 +395,13 @@ def add_numbers(a: float, b: float) -> float:
 ```
 
 Run with:
+
 ```bash
 praisonai agents.yaml
 ```
 
-> 💡 **Tips:** 
+> 💡 **Tips:**
+>
 > - Use the function name (e.g., `add_numbers`) in the tools list, not the file name
 > - Tools in `tools.py` are automatically discovered
 > - The function's docstring helps the AI understand how to use it
@@ -755,6 +759,7 @@ We welcome contributions! Fork the repo, create a branch, and submit a PR → [C
 <summary><strong>ModuleNotFoundError: No module named 'praisonaiagents'</strong></summary>
 
 Install the package:
+
 ```bash
 pip install praisonaiagents
 ```
@@ -765,6 +770,7 @@ pip install praisonaiagents
 <summary><strong>API key not found / Authentication error</strong></summary>
 
 Ensure your API key is set:
+
 ```bash
 export OPENAI_API_KEY=your_key_here
 ```
@@ -792,6 +798,7 @@ See [Models docs](https://docs.praison.ai/docs/models) for more details.
 <summary><strong>How do I persist conversations to a database?</strong></summary>
 
 Use the `db` parameter:
+
 ```python
 from praisonaiagents import Agent, db
 
